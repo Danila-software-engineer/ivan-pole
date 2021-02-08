@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.mainfragments.BasketFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5EF"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/go_basket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Корзина"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/history_order"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Очистить"
+                android:textColor="#EB4132"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/history_order"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/history_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="История заказов"
+                android:textColor="#79827D"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView36"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/go_basket"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/resView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="@drawable/shape_for_basket"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/profileButton2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#F1F1E0"
+                android:padding="20dp"
+                android:src="@drawable/vector_minus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_of_basket" />
+
+            <ImageView
+                android:id="@+id/image_of_basket"
+                android:layout_width="55dp"
+                android:layout_height="78dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/img_best_quality"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="15 000 Р"
+                android:textColor="#3B464C"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/image_of_basket"
+                app:layout_constraintTop_toTopOf="@+id/image_of_basket" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Джем “Ирга” без сахара, 180 г"
+                android:textColor="#3B464C"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/button9"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/profileButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#3B464C"
+                android:padding="20dp"
+                android:src="@drawable/vector_plus"
+                app:layout_constraintBottom_toBottomOf="@+id/profileButton2"
+                app:layout_constraintStart_toEndOf="@+id/textView39" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="1"
+                android:textColor="#3B464C"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/profileButton"
+                app:layout_constraintStart_toEndOf="@+id/profileButton2"
+                app:layout_constraintTop_toTopOf="@+id/profileButton" />
+
+            <ImageButton
+                android:id="@+id/button7"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#EB4132"
+                android:src="@drawable/vector_white_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/button9"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#3B464C"
+                android:src="@drawable/vector_white_fav"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_del_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="button9,button7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_for_basket"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <TextView
+                android:id="@+id/textView42_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Есть промо-код?"
+                android:textColor="#3B464C"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/profileButton3_1"
+                style="@style/DefButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#3B464C"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:text="Активировать"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card_number"
+                app:layout_constraintTop_toTopOf="@+id/card_number" />
+
+            <EditText
+                android:id="@+id/card_number"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/shape_register_code_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/montserrat"
+                android:hint="1w2bzk"
+                android:inputType="phone"
+                android:paddingStart="18dp"
+                android:textColorHint="#79827D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/profileButton3_1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42_1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_for_basket"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2_"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/shape_register_code_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/montserrat"
+                android:hint="100"
+                android:inputType="phone"
+                android:paddingStart="18dp"
+                android:textColorHint="#79827D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/profileButton3_"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42_" />
+
+            <Button
+                android:id="@+id/profileButton3_"
+                style="@style/DefButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#3B464C"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:text="Списать бонусы"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2_"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2_"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2_" />
+
+            <TextView
+                android:id="@+id/textView42_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Бонусы."
+                android:textColor="#3B464C"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat"
+                android:text="На вашем счету 500 ₽"
+                android:textColor="#3B464C"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView42_"
+                app:layout_constraintStart_toEndOf="@+id/textView42_"
+                app:layout_constraintTop_toTopOf="@+id/textView42_" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F1F1E0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/make_oder"
+                style="@style/DefButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#FF9B39"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:text="Оформить заказ"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42_2" />
+
+            <TextView
+                android:id="@+id/textView42_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="12 000 ₽"
+                android:textColor="#3B464C"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView42_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView42_2" />
+
+            <TextView
+                android:id="@+id/textView42_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Итого:"
+                android:textColor="#3B464C"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="3 000 ₽"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView55"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView55" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="15 000 ₽"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView42"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Стоимость товаров:"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Скидка:"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Вес:"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="15 000 ₽"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView15" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

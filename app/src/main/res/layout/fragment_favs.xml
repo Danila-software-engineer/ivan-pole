@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.mainfragments.FavsFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frameLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F5EF"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3">
+
+                <TextView
+                    android:id="@+id/go_basket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Избранное"
+                    android:textColor="#3B464C"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Очистить"
+                    android:textColor="#EB4132"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:background="@drawable/shape_for_basket">
+
+                <ImageButton
+                    android:id="@+id/profileButton2"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/shape_register_defult_button"
+                    android:backgroundTint="#F1F1E0"
+                    android:padding="20dp"
+                    android:src="@drawable/vector_minus"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_of_basket" />
+
+                <ImageView
+                    android:id="@+id/image_of_basket"
+                    android:layout_width="55dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/img_best_quality"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="15 000 Р"
+                    android:textColor="#3B464C"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/image_of_basket"
+                    app:layout_constraintTop_toTopOf="@+id/image_of_basket" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Джем “Ирга” без сахара, 180 г"
+                    android:textColor="#3B464C"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/button9"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/shape_register_defult_button"
+                    android:backgroundTint="#3B464C"
+                    android:padding="20dp"
+                    android:src="@drawable/vector_plus"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileButton2"
+                    app:layout_constraintStart_toEndOf="@+id/textView39" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="1"
+                    android:textColor="#3B464C"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileButton"
+                    app:layout_constraintStart_toEndOf="@+id/profileButton2"
+                    app:layout_constraintTop_toTopOf="@+id/profileButton" />
+
+                <ImageButton
+                    android:id="@+id/button7"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#EB4132"
+                    android:src="@drawable/vector_white_delete"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/button9"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#FF9B39"
+                    android:src="@drawable/vector_white_basket"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_del_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="button9,button7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

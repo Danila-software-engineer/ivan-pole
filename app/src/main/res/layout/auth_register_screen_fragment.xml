@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f1df"
+        tools:context=".fragments.authfragments.RegisterFragment">
+
+
+        <TextView
+            android:id="@+id/login_from_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Войти"
+            android:textColor="#FF9B39"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#3B464C"
+            android:background="@drawable/shape_register_defult_button"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Повторить пароль"
+            android:inputType="textPersonName"
+            android:paddingStart="18dp"
+            android:textColorHint="#3B464C"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/register"
+            android:textColor="#3B464C"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="96dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#3B464C"
+            android:background="@drawable/shape_register_defult_button"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Ваше имя"
+            android:inputType="textPersonName"
+            android:paddingStart="18dp"
+            android:textColorHint="#3B464C"
+            app:layout_constraintBottom_toTopOf="@+id/card_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/card_number"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="number"
+            app:mask="+7 (___) ___ __ __"
+            app:maskCharacter="_"
+            app:maskStyle="normal"
+            android:background="@drawable/shape_register_defult_button"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="+7"
+            android:paddingStart="18dp"
+            android:textColorHint="#3B464C"
+            android:textColor="#3B464C"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#3B464C"
+            android:background="@drawable/shape_register_defult_button"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Пароль"
+            android:inputType="textPersonName"
+            android:paddingStart="18dp"
+            android:textColorHint="#3B464C"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_number" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/DefButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:height="12dp"
+            android:backgroundTint="#FF9B39"
+            android:text="Зарегестрироваться"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/DefButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/google_1"
+            android:paddingLeft="25dp"
+            android:text="Войти с помощью Google"
+            android:textColor="#3B464C"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/login_from_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat"
+            android:gravity="right"
+            android:text="У меня уже есть аккаунт."
+            android:textColor="#3B464C"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/login_from_register"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

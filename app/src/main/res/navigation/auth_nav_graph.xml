@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.authfragments.RegisterFragment"
+        android:label="auth_register_screen_fragment"
+        tools:layout="@layout/auth_register_screen_fragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_codeFragment"
+            app:destination="@id/codeFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signFragment"
+            app:destination="@id/signFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/codeFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.authfragments.CodeFragment"
+        android:label="auth_get_code_sms_fragmet"
+        tools:layout="@layout/auth_get_code_sms_fragmet" >
+        <action
+            android:id="@+id/action_codeFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/signFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.authfragments.SignFragment"
+        android:label="auth_sign_in_fragment"
+        tools:layout="@layout/auth_sign_in_fragment" >
+        <action
+            android:id="@+id/action_signFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.authfragments.SplashFragment"
+        android:label="auth_splash_screen_fragment"
+        tools:layout="@layout/auth_splash_screen_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="orders.appup_kw.ivanpole.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

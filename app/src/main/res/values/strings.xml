@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Иван Поле</string>
+    <string name="Welcome">Добро пожаловать!</string>
+    <string name="Desc">В интернет-магазин производителя продуктов правильного питания и здорового образа жизни</string>
+    <string name="start">Начать</string>
+    <string name="register">Регистрация</string>
+    <string name="YourN">Ваше имя</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

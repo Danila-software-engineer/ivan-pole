@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/blankFragment">
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.ProfileFragment"
+        android:label="main_profile_fragment"
+        tools:layout="@layout/main_profile_fragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_authActivity"
+            app:destination="@id/authActivity" />
+        <action
+            android:id="@+id/action_profileFragment_to_favsFragment"
+            app:destination="@id/favsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_deliveryPaymentFragment"
+            app:destination="@id/deliveryPaymentFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_setProfileFragment"
+            app:destination="@id/setProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_exchangeReturnFragment"
+            app:destination="@id/exchangeReturnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_goodsFragment"
+            app:destination="@id/goodsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneGoodFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.OneGoodFragment"
+        android:label="fragment_one_good"
+        tools:layout="@layout/fragment_one_good" />
+    <fragment
+        android:id="@+id/goodsFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.GoodsFragment"
+        android:label="fragment_goods"
+        tools:layout="@layout/fragment_goods" >
+        <action
+            android:id="@+id/action_goodsFragment_to_oneGoodFragment"
+            app:destination="@id/oneGoodFragment" />
+        <action
+            android:id="@+id/action_goodsFragment_to_setSortingFragment"
+            app:destination="@id/setSortingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" >
+        <action
+            android:id="@+id/action_basketFragment_to_deliveryFragment"
+            app:destination="@id/deliveryFragment" />
+        <action
+            android:id="@+id/action_basketFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/authActivity"
+        android:name="orders.appup_kw.ivanpole.activity.AuthActivity"
+        android:label="activity_auth"
+        tools:layout="@layout/activity_auth" />
+    <fragment
+        android:id="@+id/favsFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.FavsFragment"
+        android:label="fragment_favs" />
+    <fragment
+        android:id="@+id/deliveryFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.DeliveryFragment"
+        android:label="fragment_delivery"
+        tools:layout="@layout/fragment_delivery" >
+        <action
+            android:id="@+id/action_deliveryFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.OrderHistoryFragment"
+        android:label="fragment_order_history"
+        tools:layout="@layout/fragment_order_history" >
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/deliveryPaymentFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.DeliveryPaymentFragment"
+        android:label="fragment_delivery_payment"
+        tools:layout="@layout/fragment_delivery_payment" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/setProfileFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.SetProfileFragment"
+        android:label="fragment_set_profile"
+        tools:layout="@layout/fragment_set_profile" />
+    <fragment
+        android:id="@+id/exchangeReturnFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.ExchangeReturnFragment"
+        android:label="fragment_exchange_return"
+        tools:layout="@layout/fragment_exchange_return" />
+    <fragment
+        android:id="@+id/setSortingFragment"
+        android:name="orders.appup_kw.ivanpole.fragments.mainfragments.SetSortingFragment"
+        android:label="SetSortingFragment" />
+</navigation>

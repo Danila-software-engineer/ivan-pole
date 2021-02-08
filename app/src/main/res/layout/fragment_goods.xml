@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        tools:context=".fragments.mainfragments.GoodsFragment">
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_action_bar"
+            app:layout_constraintBottom_toTopOf="@+id/rec_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/search_goods3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_register_defult_button"
+            android:ems="10"
+            android:paddingVertical="8dp"
+            android:fontFamily="@font/montserrat"
+            android:hint="Поиск..."
+            android:inputType="textPersonName"
+            android:paddingStart="15dp"
+            android:paddingEnd="8dp"
+            android:textColor="#000000"
+            android:textColorHint="#3B464C"
+            app:layout_constraintBottom_toBottomOf="@+id/button_sort"
+            app:layout_constraintEnd_toStartOf="@+id/button_sort"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_sort" />
+
+        <ImageButton
+            android:id="@+id/button_search_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#00000000"
+            app:layout_constraintBottom_toBottomOf="@+id/search_goods3"
+            app:layout_constraintEnd_toEndOf="@+id/search_goods3"
+            app:layout_constraintTop_toTopOf="@+id/search_goods3"
+            app:srcCompat="@drawable/vector_krest" />
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/vectorback"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Десерты без сахара"
+            android:textColor="#3B464C"
+            app:layout_constraintBottom_toBottomOf="@+id/button_back"
+            app:layout_constraintEnd_toStartOf="@+id/button_search_on"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/button_back"
+            app:layout_constraintTop_toTopOf="@+id/button_back" />
+
+        <ImageButton
+            android:id="@+id/button_sort"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_register_defult_button"
+            android:backgroundTint="#3B464C"
+            android:src="@drawable/group_katigory"
+            app:layout_constraintBottom_toBottomOf="@+id/button_filter"
+            app:layout_constraintEnd_toStartOf="@+id/button_filter"
+            app:layout_constraintTop_toTopOf="@+id/button_filter" />
+
+        <ImageButton
+            android:id="@+id/button_search_on"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_register_defult_button"
+            android:backgroundTint="#3B464C"
+            android:src="@drawable/vector_search_white"
+            app:layout_constraintBottom_toBottomOf="@+id/button_sort"
+            app:layout_constraintEnd_toStartOf="@+id/button_sort"
+            app:layout_constraintTop_toTopOf="@+id/button_sort" />
+
+        <ImageButton
+            android:id="@+id/button_filter"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_register_defult_button"
+            android:backgroundTint="#3B464C"
+            android:src="@drawable/vector_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/goods_first"
+            android:layout_width="178dp"
+            android:layout_height="330dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_register_code_edit_text"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_filter">
+
+            <ImageButton
+                android:id="@+id/button_minus_bay"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#3B464C"
+                android:src="@drawable/vector_minus_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_amount_bay"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/button_plus_bay"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#3B464C"
+                android:src="@drawable/vector_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_amount_bay" />
+
+            <Button
+                android:id="@+id/button_amount_bay"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#FF9B39"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#3B464C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_plus_bay"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_minus_bay" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_bay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="text_many_bay,button_to_basket"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/goods_image"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/img_best_quality"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_category"
+                android:backgroundTint="#8BB931"
+                android:fontFamily="@font/montserrat"
+                android:padding="2dp"
+                android:text="Новинка"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="#F1F1E0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goods_image">
+
+                <TextView
+                    android:id="@+id/kkal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="150"
+                    android:textColor="#3B464C"
+                    android:textSize="15sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/protein"
+                    app:layout_constraintEnd_toStartOf="@+id/protein"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/protein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="4"
+                    android:textColor="#3B464C"
+                    android:textSize="15sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/xe"
+                    app:layout_constraintEnd_toStartOf="@+id/xe"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/kkal" />
+
+                <TextView
+                    android:id="@+id/xe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="0.3"
+                    android:textColor="#3B464C"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/protein"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="хе"
+                    android:textColor="#3B464C"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/xe"
+                    app:layout_constraintStart_toStartOf="@+id/xe"
+                    app:layout_constraintTop_toBottomOf="@+id/xe" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="белков"
+                    android:textColor="#3B464C"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
+                    app:layout_constraintEnd_toEndOf="@+id/protein"
+                    app:layout_constraintStart_toStartOf="@+id/protein" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="ккал"
+                    android:textColor="#3B464C"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView24"
+                    app:layout_constraintEnd_toEndOf="@+id/kkal"
+                    app:layout_constraintStart_toStartOf="@+id/kkal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/goods_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Джем “Вишня”\nбез сахара,\n180г"
+                android:textAlignment="center"
+                android:textColor="#3B464C"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+            <TextView
+                android:id="@+id/text_many_bay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="250 ₽"
+                android:textColor="#3B464C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/button_to_basket"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_register_defult_button"
+                android:backgroundTint="#FF9B39"
+                android:src="@drawable/vector_basket"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageButton
+                android:id="@+id/button_add_to_fav"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#00000000"
+                android:src="@drawable/vector_nofav"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_many_sum_bay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="123fw"
+                android:textColor="#3B464C"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_amount_bay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goods_name" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_bay_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="button_minus_bay,button_plus_bay,text_many_sum_bay,button_amount_bay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_search_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="button_back,button_search_on,textView14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_search_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="button_search_close,search_goods3"
+            app:layout_constraintStart_toStartOf="@+id/button_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_filter" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_sort"
+            android:layout_width="230dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_register_defult_button"
+            android:backgroundTint="#3B464C"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/button_sort"
+            app:layout_constraintTop_toBottomOf="@+id/button_sort">
+
+            <TextView
+                android:id="@+id/text_chip_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Самые дешевые"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/text_rich_sort"
+                app:layout_constraintEnd_toEndOf="@+id/text_rich_sort"
+                app:layout_constraintTop_toBottomOf="@+id/text_new_sort" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Сортировать:"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/text_new_sort"
+                app:layout_constraintEnd_toEndOf="@+id/text_new_sort"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_new_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Самые новые"
+                android:textColor="#FF9B39"
+                app:layout_constraintBottom_toTopOf="@+id/text_chip_sort"
+                app:layout_constraintEnd_toEndOf="@+id/text_chip_sort"
+                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+            <TextView
+                android:id="@+id/text_rich_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Самые дорогие"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_chip_sort" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
